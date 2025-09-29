@@ -1,17 +1,16 @@
 <script>
     export default { 
         // Add Code Here
-        // challenge: use array  
-        // if use div, wont be inline
-        data(){
+        data() {
             return {
-                message : "Choose your favourite fruit: ",
-                fruit1 : "apple",
-                fruit2 : "orange",
-                fruit3 : "peach",
-                fruits : ['apple','orange','banana']
+                message: "Choose your favourite fruit:",
+                fruit1: "apple",
+                fruit2: "orange",
+                fruit3: "banana",
+                // challenge: use array  
+                fruits: ["apple", "orange", "banana"]
             }
-        } 
+        }
     }
 </script>
 
@@ -21,6 +20,10 @@
         {{ fruit1 }} <input type="radio" name="fruit">
         {{ fruit2 }} <input type="radio" name="fruit">
         {{ fruit3 }} <input type="radio" name="fruit">
+        <h3>Using Array</h3>
+        <span v-for="fruit in fruits">
+            {{ fruit }} <input type="radio" name="fruit">
+        </span>
     </div>
 </template>
 

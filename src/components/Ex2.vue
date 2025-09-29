@@ -1,4 +1,3 @@
-
 <script>
     export default { 
         data() {
@@ -13,6 +12,6 @@
 
 <template>
 
-    <!-- add code here -->
-    <img v-bind:src="myImg" v-bind:width="width" v-bind:height="height"></img>
+    <img v-bind:src="myImg" v-bind:width="width" v-bind:heights="height"/>
+   
 </template>

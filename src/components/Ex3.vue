@@ -1,11 +1,12 @@
 <script>
     export default { 
 
-            data(){
+       // add code here
+        data(){
             return {
-                loginType : "username"
+                loginType: "username"
             }
-       }
+        }
     }
 </script>
 
@@ -18,13 +19,13 @@
         <option>Email login</option>
     </select>
     
-    <div v-if="loginType == 'username'">
+    <div v-if="loginType === 'username'">
         <label>Username</label>
         <input placeholder="Enter your username">
     </div>
-
     <div v-else>
         <label>Email</label>
-        <input placeholder="Enter your email address"></input>
+        <input placeholder="Enter your email">
     </div>
+
 </template>

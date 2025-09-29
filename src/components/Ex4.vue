@@ -3,31 +3,16 @@
         data() {
             return {
                 // Add code here
-                id : "demo1",
-                blueBox : true,
-                blueBtn : true
+                id: "demo1",
+                bluebtn: true,
+                blueBox: true
             }
         },
         methods: { 
    			// Add code here
-            //toChange(isBlue){
-                // if (isBlue){
-                //    console.log(isBlue);
-                //    this.isBlue=false;
-                //    isBlue=false;
-                //    this.color="redBox";
-                //}
-                //else{
-                //    this.isBlue=true;
-                //    isBlue=false;
-                //    this.color="blueBox";
-                //}
-
-            //}
-
             changeColor(){
-                this.blueBox=!this.blueBox;
-                this.redBox=!this.bl
+                this.blueBox = !this.blueBox;
+                this.bluebtn = !this.bluebtn
             }
 		}
     }
@@ -36,12 +21,12 @@
 <template>
     
     <!-- Modify code here -->
-    <div   class="container">
-        <div v-bind:id="id" class="m-2" :class="{'blueBox' : blueBox,'redBox' : !blueBtn}">
+    <div class="container">
+        <div v-bind:id="id" class="m-2" @click="changeColor" :class="{'blueBox': blueBox, 'redBox': !blueBox}">
             div ID : {{id}} 
         </div>
         
-        <button type="button" :class="{'btn btn-primary' : blueBtn, 'btn btn-danger' : !blueBtn}" v-on:click = "changeColor()">Change Color</button>
+        <button type="button" @click="changeColor" :class="{'btn btn-primary': bluebtn, 'btn btn-danger': !bluebtn}">Change Color</button>
     </div>
 
 </template>
